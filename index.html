@@ -50,38 +50,40 @@
                     </svg>
                 </li>
             </ul>
-        </div>
+            <div>
+                <!--            <p x-text="icon.backgroundColor"></p>-->
+                <input type="color" x-model="icon.backgroundColor">
+            </div>
 
-        <div>
-<!--            <p x-text="icon.backgroundColor"></p>-->
-            <input type="color" x-model="icon.backgroundColor">
-        </div>
+            <div>
+                <!--            <p x-text="icon.borderColor"></p>-->
+                <input type="color" x-model="icon.borderColor">
+            </div>
 
-        <div>
-<!--            <p x-text="icon.borderColor"></p>-->
-            <input type="color" x-model="icon.borderColor">
+            <button x-on:click="download()">生成</button>
+            <div class="grid"></div>
         </div>
-
-        <button x-on:click="download()">生成</button>
     </div>
-    <div class="grid"></div>
 </main>
 <style>
     * {
         list-style: none;
         padding-inline-start: 0;
     }
+
     .container {
         padding: 0 20px;
         /*width: 100%;*/
         margin: 0 auto;
     }
+
     .flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 10px;
     }
+
     .grid {
         display: grid;
         gap: 20px;
